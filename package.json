@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npm run eleventy && npm run tailwind",
-        "build-prod": "rm ./_site/ -r && npm run eleventy-prod && npm run tailwind-prod",
+        "build-prod": "rm ./_site/ -r -f && npm run eleventy-prod && npm run tailwind-prod",
         "eleventy": "npx @11ty/eleventy --serve --incremental",
         "eleventy-prod": "npx @11ty/eleventy",
         "tailwind": "npx tailwindcss -i styles/tailwind.css -o _site/styles/styles.css --watch",
