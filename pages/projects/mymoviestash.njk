@@ -4,14 +4,14 @@ title: MyMovieStash
 ---
 
 <h1 class="mb-8 font-serif text-4xl">MyMovieStash</h1>
-<div class="mb-3">
+<div class="mb-4">
     Link to project:
     <a href="https://mymoviestash.com" class="link">mymoviestash.com</a>
 </div>
 <div
-    class="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    class="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 >
-    <div>
+    <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-homepage.png">
             <img
                 src="/images/mymoviestash-homepage.png"
@@ -20,7 +20,7 @@ title: MyMovieStash
         </a>
         <a href="https://mymoviestash.com" class="link">Home page</a>
     </div>
-    <div>
+    <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-search.png">
             <img
                 src="/images/mymoviestash-search.png"
@@ -29,7 +29,7 @@ title: MyMovieStash
         </a>
         <a href="https://mymoviestash.com/Search?s=the+matrix" class="link">Search results</a>
     </div>
-    <div>
+    <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-moviedetails.png">
             <img
                 src="/images/mymoviestash-moviedetails.png"
@@ -38,7 +38,7 @@ title: MyMovieStash
         </a>
         <a href="https://mymoviestash.com/MovieDetails/478?u=1" class="link">Movie details</a>
     </div>
-    <div>
+    <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-moviestash.png">
             <img
                 src="/images/mymoviestash-moviestash.png"
@@ -77,8 +77,8 @@ title: MyMovieStash
             <ul class="list-inside list-disc">
                 <li>Create your own MyMovieStash account to catalog your movie
                     collection</li>
-                <li>Search for a movie by movie title persistence</li>
-                <li>Select which format(s) you own of selected movie</li>
+                <li>Search for a movie by movie title</li>
+                <li>Select which format(s) you own of a selected movie</li>
                 <li>For each format, log when you added a movie to your
                     MovieStash and when you watched it</li>
                 <li>Add the movie to your MovieStash</li>
@@ -103,6 +103,7 @@ title: MyMovieStash
                 <li>Server-side rendered pages using ASP.NET Core 6 MVC</li>
                 <li>C#</li>
                 <li>EF Core, EF Core migrations, and LINQ</li>
+                <li>ASP.NET Core Identity to user authentication</li>
                 <li>Azure SQL Database for data store</li>
             </ul>
             <h3 class="text-lg">Infrastructure</h3>
