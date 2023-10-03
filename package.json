@@ -10,7 +10,8 @@
         "eleventy": "npx @11ty/eleventy --serve --incremental",
         "eleventy-prod": "npx @11ty/eleventy",
         "tailwind": "npx tailwindcss -i styles/tailwind.css -o _site/styles/styles.css --watch",
-        "tailwind-prod": "npx tailwindcss -i styles/tailwind.css -o _site/styles/styles.css --minify"
+        "tailwind-prod": "npx tailwindcss -i styles/tailwind.css -o _site/styles/styles.css --minify",
+        "prettier": "prettier --write pages/ styles/ scripts/"
     },
     "keywords": [],
     "author": "",
