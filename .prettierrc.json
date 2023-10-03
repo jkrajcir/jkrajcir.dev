@@ -3,6 +3,8 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
+    "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "strict",
     "overrides": [
         {
             "files": "./pages/**/*.njk",
