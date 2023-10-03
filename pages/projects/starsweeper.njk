@@ -1,0 +1,211 @@
+---
+layout: main-layout.njk
+title: Starsweeper
+---
+
+<h1 class="mb-8 font-serif text-4xl">Starsweeper</h1>
+<div class="mb-4 flex flex-col gap-y-2">
+    <span>
+        Link to project:
+        <a href="https://starsweeper.space" class="link">starsweeper.space</a>
+    </span>
+    <span>
+        Link to GitHub repo:
+        <a href="https://github.com/jkrajcir/starsweeper" class="link"
+            >jkrajcir/starsweeper</a
+        >
+    </span>
+</div>
+<div
+    class="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div class="flex flex-col gap-y-1.5">
+        <a href="/images/starsweeper.png">
+            <img src="/images/starsweeper.png" title="Starsweeper" />
+            Starsweeper
+        </a>
+    </div>
+    <div class="flex flex-col content-center gap-y-1.5">
+        <a href="/images/starsweeper-leaderboard.png">
+            <img
+                src="/images/starsweeper-leaderboard.png"
+                title="Starsweeper leaderboard" />
+            Starsweeper leaderboard
+        </a>
+    </div>
+</div>
+<div class="flex flex-col gap-y-5">
+    <div class="flex flex-col gap-y-3">
+        <h2 class="font-serif text-2xl">What is Starsweeper?</h2>
+        <div class="flex flex-col gap-y-2 pl-4">
+            <p>
+                Starsweeper is a recreation of the game
+                <a
+                    href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)"
+                    class="link"
+                    >Minesweeper</a
+                >.</p
+            >
+            <p>Starsweeper features include:</p>
+            <ul class="list-inside list-disc pl-4">
+                <li
+                    >3 game difficulties:<ul
+                        class="list-inside list-[circle] pl-4">
+                        <li>Easy difficulty has a 9x9 board with 10 stars</li>
+                        <li
+                            >Normal difficulty has a 16x16 board with 40
+                            stars</li
+                        >
+                        <li>Hard difficulty has a 30x16 board with 99 stars</li>
+                    </ul></li
+                >
+                <li
+                    >Personal best time tracking<ul
+                        class="list-inside list-[circle] pl-4">
+                        <li>This is tied to your browser</li>
+                    </ul>
+                </li>
+                <li
+                    >Leaderboard for top 10 times over various date ranges<ul
+                        class="list-inside list-[circle] pl-4">
+                        <li>Grouped by difficulty</li>
+                        <li
+                            >Date ranges are: Today, Last 7 Days, Last 30 Days,
+                            Last Year, and All Time</li
+                        >
+                    </ul></li
+                >
+            </ul>
+        </div>
+    </div>
+    <div class="flex flex-col gap-y-3">
+        <h2 class="font-serif text-2xl">Why was Starsweeper Made?</h2>
+        <div class="pl-4">
+            <p>
+                I had a knack to implement Minesweeper, and I also wanted to
+                learn how to use Vue.js, so I put some time into these two
+                desires and created Starsweeper. While developing Starsweeper, I
+                thought of adding a leaderboard feature. I used this as an
+                oppurtunity to learn a "simpler" cloud platform(previous
+                personal project experience using Azure), and decided on
+                DigitalOcean's App Platform to host and manage the SPA,
+                serverless functions, and DB.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-y-3">
+        <h2 class="font-serif text-2xl"
+            >Tech Used to Build and Run Starsweeper</h2
+        >
+        <div class="flex flex-col gap-y-2 pl-4">
+            <p
+                >The Starsweeper source code is organized as a monorepo
+                containing three projects:</p
+            >
+            <ul class="list-inside list-disc pl-4">
+                <li
+                    ><code>common</code> - contains code used by both
+                    <code>client</code> and <code>serverless</code> projects,
+                    mainly DTO schema declaration and validation functions</li
+                >
+                <li
+                    ><code>client</code> - contains Vue.js single-page
+                    application</li
+                >
+                <li><code>serverless</code> - contains serverless functions</li>
+            </ul>
+            <p
+                >All three projects are implemented using TypeScript and uses
+                Prettier for formatting and ESLint for static analysis.</p
+            >
+            <h3 class="text-lg"><code>client</code> project</h3>
+            <ul class="list-inside list-disc pl-4">
+                <li>Vite front-end tooling</li>
+                <li>UI built using Vue.js SFCs with CSS/SCSS styling</li>
+                <li>Pinia for state management</li>
+                <li
+                    >Icons from
+                    <a class="link" href="https://remixicon.com"
+                        >Remix Icon</a
+                    ></li
+                >
+                <li
+                    >Favicon from
+                    <a class="link" href="https://favicon.io">favicon.io</a></li
+                >
+            </ul>
+            <h3 class="text-lg"><code>serverless</code> project</h3>
+            <ul class="list-inside list-disc pl-4">
+                <li>DigitalOcean Functions for serverless back-end</li>
+                <li>Rollup for bundling a serverless function</li>
+                <li
+                    >Two functions for leaderboard feature:<ul
+                        class="list-inside list-disc pl-4">
+                        <li
+                            ><code>get-leaderboard-entries</code> - gets
+                            leaderboard entries from database</li
+                        >
+                        <li
+                            ><code>save-new-top-time</code> - saves new top time
+                            to database if player placed on leaderboard</li
+                        >
+                    </ul></li
+                >
+            </ul>
+            <h3 class="text-lg">Database</h3>
+            <ul class="list-inside list-disc pl-4">
+                <li
+                    >DigitalOcean Managed Database to host PostgreSQL 15
+                    cluster</li
+                >
+            </ul>
+            <h3 class="text-lg">Infrastructure</h3>
+            <ul class="list-inside list-disc pl-4">
+                <li
+                    >GitHub Actions for CI workflows for both
+                    <code>client</code> and <code>serverless</code> projects<ul
+                        class="list-inside list-[circle] pl-4"
+                        ><li
+                            >CI build runs on pull requests if there are changes
+                            in either respective projects</li
+                        ></ul
+                    ></li
+                >
+                <li
+                    >DigitalOcean App Platform to host and manage
+                    <code>client</code>, <code>serverless</code> functions, and
+                    database under one app</li
+                >
+                <li
+                    >Deployed using DigitalOcean App Platform's automatic
+                    deployment</li
+                >
+            </ul>
+        </div>
+    </div>
+    <div class="flex flex-col gap-y-3">
+        <h2 class="font-serif text-2xl">TODO items</h2>
+        <div class="flex flex-col gap-y-2 pl-4">
+            <ul class="list-inside list-disc">
+                <li>Setup test suite</li>
+                <li
+                    >Add loading indicators for UI that corresponds with
+                    <code>serverless</code> functions</li
+                >
+                <li>Issues in GitHub repository</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<a
+    class="mt-12 block w-fit rounded-md bg-blue-600 px-4 py-2 text-slate-100 shadow shadow-zinc-700 hover:bg-blue-700 hover:shadow-md hover:shadow-zinc-700 dark:bg-blue-300 dark:text-zinc-700 dark:shadow-slate-400 dark:hover:bg-blue-200 dark:hover:shadow-slate-400"
+    href="/projects/">
+    <svg
+        class="mr-2 inline fill-slate-100 dark:fill-zinc-900"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24">
+        <path
+            d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
+    </svg>
+    Projects
+</a>
