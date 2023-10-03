@@ -9,14 +9,12 @@ title: MyMovieStash
     <a href="https://mymoviestash.com" class="link">mymoviestash.com</a>
 </div>
 <div
-    class="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
->
+    class="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-homepage.png">
             <img
                 src="/images/mymoviestash-homepage.png"
-                title="MyMovieStash homepage"
-            />
+                title="MyMovieStash homepage" />
         </a>
         <a href="https://mymoviestash.com" class="link w-fit">Home page</a>
     </div>
@@ -24,28 +22,35 @@ title: MyMovieStash
         <a href="/images/mymoviestash-search.png">
             <img
                 src="/images/mymoviestash-search.png"
-                title="MyMovieStash search results"
-            />
+                title="MyMovieStash search results" />
         </a>
-        <a href="https://mymoviestash.com/Search?s=the+matrix" class="link w-fit">Search results</a>
+        <a
+            href="https://mymoviestash.com/Search?s=the+matrix"
+            class="link w-fit"
+            >Search results</a
+        >
     </div>
     <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-moviedetails.png">
             <img
                 src="/images/mymoviestash-moviedetails.png"
-                title="MyMovieStash movie details"
-            />
+                title="MyMovieStash movie details" />
         </a>
-        <a href="https://mymoviestash.com/MovieDetails/478?u=1" class="link w-fit">Movie details</a>
+        <a
+            href="https://mymoviestash.com/MovieDetails/478?u=1"
+            class="link w-fit"
+            >Movie details</a
+        >
     </div>
     <div class="flex flex-col gap-y-1.5">
         <a href="/images/mymoviestash-moviestash.png">
             <img
                 src="/images/mymoviestash-moviestash.png"
-                title="MyMovieStash MovieStash"
-            />
+                title="MyMovieStash MovieStash" />
         </a>
-        <a href="https://mymoviestash.com/MovieStash/1" class="link w-fit">MovieStash</a>
+        <a href="https://mymoviestash.com/MovieStash/1" class="link w-fit"
+            >MovieStash</a
+        >
     </div>
 </div>
 <div class="flex flex-col gap-y-5">
@@ -66,8 +71,8 @@ title: MyMovieStash
             </p>
             <p>
                 The second reason is that I also wanted to learn how to design
-                and build a web application, from the frontend, to the
-                backend, and the infrastructure.
+                and build a web application, from the frontend, to the backend,
+                and the infrastructure.
             </p>
         </div>
     </div>
@@ -75,35 +80,43 @@ title: MyMovieStash
         <h2 class="font-serif text-2xl">What can you do on MyMovieStash?</h2>
         <div class="flex flex-col gap-y-2 pl-4">
             <ul class="list-inside list-disc">
-                <li>Create your own MyMovieStash account to catalog your movie
-                    collection</li>
+                <li
+                    >Create your own MyMovieStash account to catalog your movie
+                    collection</li
+                >
                 <li>Search for a movie by movie title</li>
                 <li>Select which format(s) you own of a selected movie</li>
-                <li>For each format, log when you added a movie to your
-                    MovieStash and when you watched it</li>
+                <li
+                    >For each format, log when you added a movie to your
+                    MovieStash and when you watched it</li
+                >
                 <li>Add the movie to your MovieStash</li>
                 <li>View your MovieStash, with filtering and sort by</li>
-                <li>Share your MovieStash, with or without applied filtering and
-                    sort by</li>
+                <li
+                    >Share your MovieStash, with or without applied filtering
+                    and sort by</li
+                >
             </ul>
         </div>
     </div>
     <div class="flex flex-col gap-y-3">
-        <h2 class="font-serif text-2xl">Tech used to build/run MyMovieStash</h2>
+        <h2 class="font-serif text-2xl"
+            >Tech Used to Build and Run MyMovieStash</h2
+        >
         <div class="flex flex-col gap-y-2 pl-4">
-            <h3 class="text-lg">Frontend</h3>
+            <h3 class="text-lg">Front-end</h3>
             <ul class="list-inside list-disc pl-4">
                 <li>Bootstrap v5</li>
                 <li>Custom CSS/SCSS</li>
                 <li>Native JavaScript</li>
                 <li>npm and Rollup.js to manage client-side assets</li>
             </ul>
-            <h3 class="text-lg">Backend</h3>
+            <h3 class="text-lg">Back-end</h3>
             <ul class="list-inside list-disc pl-4">
                 <li>Server-side rendered pages using ASP.NET Core 6 MVC</li>
                 <li>C#</li>
                 <li>EF Core, EF Core migrations, and LINQ</li>
-                <li>ASP.NET Core Identity to user authentication</li>
+                <li>ASP.NET Core Identity for user authentication</li>
                 <li>Azure SQL Database for data store</li>
             </ul>
             <h3 class="text-lg">Infrastructure</h3>
@@ -112,13 +125,20 @@ title: MyMovieStash
                 <li>Cloudflare for DNS records management</li>
                 <li>Azure Key Vault for secrets management</li>
                 <li>Azure Cognitive Search for searching by movie title</li>
-                <li>Azure Data Factory for running ETL pipeline, using Azure
-                    Data Lake Storage Gen2 for staging data, and loading transformed data using stored procedures</li>
-                <li>Azure Active Directory authentication and Azure role-based
-                    access control authorization</li>
+                <li
+                    >Azure Data Factory for running ETL pipeline, using Azure
+                    Data Lake Storage Gen2 for staging data, and loading
+                    transformed data using stored procedures</li
+                >
+                <li
+                    >Azure Active Directory authentication and Azure role-based
+                    access control authorization</li
+                >
                 <li>Azure DevOps Services for hosting git repo</li>
-                <li>Azure Pipelines for CICD, using dockerized self-hosted agent
-                    to run jobs</li>
+                <li
+                    >Azure Pipelines for CICD, using dockerized self-hosted
+                    agent to run jobs</li
+                >
                 <li>Mailgun for transactional emails, MJML for templating</li>
             </ul>
         </div>
@@ -138,17 +158,14 @@ title: MyMovieStash
 </div>
 <a
     class="mt-12 block w-fit rounded-md bg-blue-600 px-4 py-2 text-slate-100 shadow shadow-zinc-700 hover:bg-blue-700 hover:shadow-md hover:shadow-zinc-700 dark:bg-blue-300 dark:text-zinc-700 dark:shadow-slate-400 dark:hover:bg-blue-200 dark:hover:shadow-slate-400"
-    href="/projects/"
->
+    href="/projects/">
     <svg
         class="mr-2 inline fill-slate-100 dark:fill-zinc-900"
         width="24"
         height="24"
-        viewBox="0 0 24 24"
-    >
+        viewBox="0 0 24 24">
         <path
-            d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
-        ></path>
+            d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
     </svg>
     Projects
 </a>
